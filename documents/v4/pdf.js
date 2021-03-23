@@ -25,10 +25,8 @@ exports.generateTable = function(data, config) {
         pageWidth: "210",
         pageHeight: "297",
         columns: data.columns,
-        align: {
-            columns: "center",
-            rows: "center"
-        }
+        alignColumns: "center",
+        alignRows: "center"
     };
 
     setTemplateParameters(templateParameters, config);
@@ -56,15 +54,14 @@ function setTemplateParameters(templateParameters, config) {
 }
 
 function setDocumentAlign(templateParameters, config) {
-    if (config && config.align) {
-        if (config.align.columns) {
-            templateParameters.align.columns = config.align.columns;
-        }
-        if (config.align.rows) {
-            templateParameters.align.rows = config.align.rows;
-        }
+    if (config && config.alignColumns) {
+        templateParameters.alignColumns = config.alignColumns;
+    }
+    if (config && config.alignRows) {
+        templateParameters.alignRows = config.alignRows;
     }
 }
+
 function setDocumentSize(templateParameters, config) {
     if (config && config.size) {
         switch (config.size.toLowerCase()) {
