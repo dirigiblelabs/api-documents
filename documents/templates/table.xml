@@ -25,7 +25,7 @@
 
                     <fo:block font-size="10pt">
                         <fo:table table-layout="fixed" width="100%" border-collapse="separate">
-                            <fo:table-header text-align="${align.columns}" font-weight="bold">
+                            <fo:table-header text-align="${alignColumns}" font-weight="bold">
                                 <fo:table-row>
 #foreach ($column in $columns)
                                     <fo:table-cell border-width="0.5mm" border-style="solid">
@@ -47,7 +47,7 @@
     </xsl:template>
 
     <xsl:template match="rows" keep-with-next="always">
-        <fo:table-row text-align="${align.rows}" >
+        <fo:table-row text-align="${alignRows}" >
             <xsl:if test="bold = 'true'">
                 <xsl:attribute name="font-weight">bold</xsl:attribute>
             </xsl:if>
