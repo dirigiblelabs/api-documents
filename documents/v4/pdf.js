@@ -38,7 +38,7 @@ exports.generateTable = function(data, config) {
     let xmlData = xml.fromJson({
         content: data
     });
-    return org.eclipse.dirigible.api.v3.pdf.PDFFacade.convertToPdf(pdfTemplate, xmlData);
+    return org.eclipse.dirigible.api.v3.documents.pdf.PDFFacade.generate(pdfTemplate, xmlData);
 };
 
 exports.generate = function(templatePath, data) {
@@ -47,7 +47,7 @@ exports.generate = function(templatePath, data) {
     let xmlData = xml.fromJson({
         content: data
     });
-	return org.eclipse.dirigible.api.v3.pdf.PDFFacade.convertToPdf(template, xmlData);
+	return org.eclipse.dirigible.api.v3.documents.pdf.PDFFacade.generate(template, xmlData);
 };
 
 function setTemplateParameters(templateParameters, config) {
