@@ -8,9 +8,8 @@
  * Contributors:
  *   SAP - initial API and implementation
  */
-exports.getContent = function() {
-	return [{
-		name: "documents/v4/pdf",
-		description: "PDF API"
-	}];
+var platform = require("platform/v4/registry")
+exports.getContent = function () {
+	var file = platform.getText("documents/extensions/modules.json");
+	return JSON.parse(file);
 };
