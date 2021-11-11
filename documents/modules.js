@@ -9,6 +9,6 @@
  *   SAP - initial API and implementation
  */
 exports.getPdf = function() {
-	var pdf = require('documents/v4/pdf');
+	let pdf = require('documents/v4/pdf');
 	return pdf;
 };

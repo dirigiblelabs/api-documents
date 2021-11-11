@@ -8,7 +8,7 @@
  * Contributors:
  *   SAP - initial API and implementation
  */
-var pdf = require('documents/v4/pdf');
+let pdf = require('documents/v4/pdf');
 for(var propertyName in pdf) {
 	exports[propertyName] = pdf[propertyName];
 }
